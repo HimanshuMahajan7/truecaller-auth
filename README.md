@@ -2,7 +2,7 @@
 An npm module which provides an easy way to verify Truecaller user profiles on the server side.
 
 # Installation
-`npm install truecaller`
+`npm install truecaller-auth`
 
 # Usage
     var truecaller = require('truecaller');
