@@ -1,4 +1,4 @@
-# truecaller
+# Truecaller Auth
 An npm module which provides an easy way to verify Truecaller user profiles on the server side.
 
 # Installation
@@ -20,7 +20,3 @@ An npm module which provides an easy way to verify Truecaller user profiles on t
             ...
         }
     });
-    
-# Coming soon
-    - Examples
-    - Test cases
