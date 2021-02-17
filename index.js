@@ -50,12 +50,12 @@ function _deconstructProfile(profile, callback) {
 
     var _profile = JSON.parse(JSON.stringify(profile));
 
-    delete(_profile.signature);
-    delete(_profile.signatureAlgorithm);
-    delete(_profile.payload);
-    delete(_profile.isSimChanged);
-    delete(_profile.verificationTimestamp);
-    delete(_profile.verificationMode);
+    delete (_profile.signature);
+    delete (_profile.signatureAlgorithm);
+    delete (_profile.payload);
+    delete (_profile.isSimChanged);
+    delete (_profile.verificationTimestamp);
+    delete (_profile.verificationMode);
 
     result.profile = _profile;
     result.signature = profile.signature;
@@ -85,7 +85,7 @@ function _verifyPayload(profile, callback) {
     if (truecallerProfile.decodedPayload.hasOwnProperty('requestTime')) {
       delete truecallerProfile.decodedPayload.requestTime;
     }
-    if (_.isEqual(truecallerProfile.profile, truecallerProfile.decodedPayload)) {
+    if (_.isEqual(truecallerProfile.profile.phoneNumber, truecallerProfile.decodedPayload.phoneNumber)) {
       return callback(null, true);
     } else {
       return callback(null, false);
